@@ -50,13 +50,17 @@ done
   }
   return (
   <>
-  <marquee><h1 className='h1'>Download Bash file from here and add in the folder</h1></marquee>
-    <div className='form'>
-    <form onSubmit={submit} className='data'>
-        <input type='text' className='input' placeholder='Please Enter Github Repository Link'  name='giturl' value={url} onChange={urlUpdate} required={true}></input><br/>
-        {/* <input type="text" name='localPath' value={Localpath} onChange={LocalPathUpdate} required={true}></input> */}
-        <button className='btn' type='submit' name='Download' value='Download' onClick={downloadFile}>Download File</button>
-    </form>
+  <div className="box">
+        <form onSubmit={submit}>
+            <div className="inputBx">
+                <span></span>
+                <input type="Link" placeholder="Upload Link Here" name='giturl' value={url} onChange={urlUpdate} required={true}></input>
+            </div>
+            <div className="inputBx">
+                <span></span>
+                <input type="submit" placeholder="Username" name='Download' value='Download' onClick={downloadFile}></input>
+            </div>
+        </form>
     </div>
   </>  
   );
